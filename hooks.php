@@ -38,6 +38,7 @@ Filter::add('admin_foot_after', function ($after) {
           selector: "textarea.tinymce",
           language_url : "'.PLUGINS.'/tinymce/langs/pl.js",
           language: "pl",
+          relative_urls: false,
           entity_encoding: "raw",
           plugins: "advlist autolink link image lists charmap print hr anchor pagebreak searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking table contextmenu directionality emoticons paste textcolor code fullscreen",
           toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect | link unlink anchor | image | code fullscreen"
