@@ -17,6 +17,13 @@ Filter::add('admin_textarea', function ($args) {
     return $html;
 });
 
+// editor styles
+Filter::add('admin_head_after', function ($after) {
+  $after[] = '<style>div.mce-fullscreen {z-index: 1050}</style>';
+
+  return $after;
+});
+
 // external scripts
 Filter::add('admin_foot_scripts', function ($scripts) {
     $scripts[] = PLUGINS.'/tinymce/bower_components/tinymce/tinymce.min.js';
