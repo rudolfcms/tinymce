@@ -26,7 +26,7 @@ Filter::add('admin_head_after', function ($after) {
 
 // external scripts
 Filter::add('admin_foot_scripts', function ($scripts) {
-    $scripts[] = PLUGINS.'/tinymce/bower_components/tinymce/tinymce.min.js';
+    $scripts[] = PLUGINS.'/tinymce/tinymce.min.js';
 
     return $scripts;
 });
@@ -35,13 +35,28 @@ Filter::add('admin_foot_scripts', function ($scripts) {
 Filter::add('admin_foot_after', function ($after) {
     $after[] = '<script>
         tinymce.init({
+          mode : "specific_textareas",
+          theme: "modern",
           selector: "textarea.tinymce",
           language_url : "'.PLUGINS.'/tinymce/langs/pl.js",
           language: "pl",
           relative_urls: false,
           entity_encoding: "raw",
-          plugins: "advlist autolink link image lists charmap print hr anchor pagebreak searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking table contextmenu directionality emoticons paste textcolor code fullscreen",
-          toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect | link unlink anchor | image | code fullscreen"
+          plugins: [
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+            "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+            "table contextmenu directionality emoticons paste textcolor filemanager code fullscreen",
+            "responsivefilemanager"
+          ],
+          toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+          toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor | print preview code fullscreen",
+          image_advtab: true,
+
+          external_filemanager_path: "'.PLUGINS.'/responsive-file-manager/filemanager/",
+          filemanager_title: "Responsive Filemanager" ,
+          external_plugins: {
+            "filemanager" : "plugins/filemanager/plugin.js"
+          },
         });
     </script>';
 
