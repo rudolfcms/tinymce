@@ -1,0 +1,15 @@
+image: node:4.2.2
+
+cache:
+  paths:
+  - bower_components
+  - node_modules
+
+build:
+  script:
+  - bower install
+  - npm install
+  - npm run build
+  artifacts:
+    paths:
+    - build
