@@ -10,3 +10,17 @@ install:
 
 script:
   - npm run build
+
+before_deploy:
+  - cd build/
+  - zip -r tinymce *
+
+deploy:
+  provider: releases
+  api_key:
+    secure: CWuaK7wySo7sTHb7Brf9pvCTS1al4/YixIRF0RKnl3AB7irYsQNUkAMl0DL5YIn6BzdXtTur4ViwtIb86qKp9M8joPZsVkjeGvxIriVDjMsOCizKgbLPBnY/Tsr4U/94ZO0mZx0iQLpYsBKvDokzKH2AhWR92m3oWCcpRsb3UtaEsMBgpKhBjIr0dajoYfa0MfkTykTGBx+IXrOaYvU0m5X3wtfjQMpppLcyFVojPOGnLGIRLzOPri3MJL6iDKon9mE/62789OiA1nYvt7IM9G18jEzR3QeX02WnNXv8K67AxUqg8pKuSbVCjtvgfCBW5299ZC7iz9BLKluGgBT3GaOl2usEqq+L3ALHqQtestP61dk16YOD2SuiJk5wDNH/eL5B0coevZ2tHKIQ6Ru+joeZ/iwZ7SPozGoSn7ry8xQ3Mfj+ecpx0RR+QnagPqQcqsWhCNrB8CUkzbhHJyAk0/3ekDOMN5hLRaUZJuCyYd90vcWPznuXnlh2DTPRHI2nbF1e+bFQDt0wbKP9PhbH6ccJ7cMZVRhIjkmEabs6sI8KbyWjcyxQRlx+hQtbCyOhKPkP6+O7QKVTCY5ESQhwkS/9vgzPsGmnhl0s89KdxzjHtaeVARlL4pzFim8N+ibMqEmoE0tmj5sjdLw8KEOqjVfcrDBY1EkKF7x9R2G2Syk=
+  file: tinymce.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
