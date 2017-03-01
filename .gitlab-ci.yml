@@ -12,6 +12,16 @@ build:
   - bower install --allow-root
   - npm install
   - npm run build
+  - cd build/
+  - mv langs plugins skins themes hooks.php jquery.tinymce.min.js tinymce.jquery.min.js tinymce.min.js ../
+  - cd ../
   artifacts:
     paths:
-    - build
+    - langs
+    - plugins
+    - skins
+    - themes
+    - hooks.php
+    - jquery.tinymce.min.js
+    - tinymce.jquery.min.js
+    - tinymce.min.js
