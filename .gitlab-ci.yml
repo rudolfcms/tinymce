@@ -8,7 +8,8 @@ cache:
 build:
   script:
   - npm install -g bower
-  - su nobody -c "bower install"
+  - npm install -g gulp
+  - bower install --allow-root
   - npm install
   - npm run build
   artifacts:
