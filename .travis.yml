@@ -20,7 +20,7 @@ deploy:
   api_key:
     secure: DRlx5GqEM9D5mbg3vUlnplHAjEEm+MThcGB0OXY6n8BVHFPI9NXiO1FUSelfxZxkKcpvA+MuX0qcj24F/zq2nvqBccnek19sG4N1VpbPaaXr7hlRrtU3LW3I22ZbnUriHuhtRNJknw2XSDSwyrtLuRmng1Vy/6o16ZFH0+Gk64dDw4Rthzl299BcBUYpRoQbLAMTWKVNHbAGruGX69+HjR0EXaCVZpPBGrxuRVLszklQvtXiZ1QgHNqmLHqpP+xfgF0tni5lbv883NlyvUgGBEmTXUh8csZJCOhB+FNBRhy72gKM0Aog2rrdLEvx2N12JPOwQ0uMEIEZsu0qixAQWNm/UrVGrzBhYJN+Gq/UMTVvDu3KjdZ0GkqvdOrqvREFRN205mVHjhHk1svnePdbAlimGXcEE7hpPT5HPGdh7TbgNsro4vUA/AMPA8LVNVzQnTaGlExHWT7SQydL48UDKArm5+WHBvlPehZUgNq8FqrOdqcKcHkCSwguCGxoRxJ2OoCTolJzBMKHUMfgWXEbLF1nRelO7T8mczcl0vL/gb19hWCgvIHJ5F8VvxRIcFK8TERwx8wivBQia+ZSN7UoGXi3L+VaCe5p2k9wO3w/WsbdYiDGgrWAnMOSPhO0o9HBeiWHqAno9YdvjCMpbDIoSWBYsRxRI2Q5h/bN6+F71u0=
   file: tinymce.zip
+  skip_cleanup: true
   on:
     tags: true
     repo: rudolfcms/tinymce
-    skip_cleanup: true
