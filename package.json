@@ -1,6 +1,6 @@
 {
   "name": "tinymce",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "tinymce plugin for rudolf",
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,14 @@
   "author": "Mikołaj Pich <m.pich@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "tinymce": "^4.5.4",
+    "tinymce": "^4.8.1",
     "tinymce-i18n": "*"
   },
   "devDependencies": {
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "lodash": "^4.17.4",
-    "run-sequence": "^1.2.2"
+    "gulp-rename": "^1.4.0",
+    "lodash": "^4.17.10",
+    "run-sequence": "^2.2.1"
   }
 }
