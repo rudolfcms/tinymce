@@ -1,4 +1,4 @@
-image: node:4.2.2
+image: node:8-alpine
 
 cache:
   paths:
@@ -8,12 +8,11 @@ cache:
 build:
   script:
   - npm install -g bower
-  - npm install -g gulp
-  - bower install --allow-root
   - npm install
+  - bower install --allow-root
   - npm run build
   - cd build/
-  - mv langs plugins skins themes hooks.php jquery.tinymce.min.js tinymce.jquery.min.js tinymce.min.js ../
+  - mv langs plugins skins themes hooks.php jquery.tinymce.min.js tinymce.min.js ../
   - cd ../
   artifacts:
     paths:
@@ -23,5 +22,4 @@ build:
     - themes
     - hooks.php
     - jquery.tinymce.min.js
-    - tinymce.jquery.min.js
     - tinymce.min.js

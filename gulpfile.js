@@ -8,7 +8,7 @@ var paths = {
   npm: "./node_modules/",
   bower: "./bower_components/",
   dest: "./build/"
-}; 
+};
 
 var npm = {
   "tinymce": "tinymce/**/*.{min\.js,min\.css,ttf,svg,woff,eot}",
