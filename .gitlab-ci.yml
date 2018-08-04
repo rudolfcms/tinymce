@@ -8,8 +8,8 @@ cache:
 build:
   script:
   - npm install -g bower
-  - npm install
   - bower install --allow-root
+  - npm install
   - npm run build
   - cd build/
   - mv langs plugins skins themes hooks.php jquery.tinymce.min.js tinymce.min.js ../
