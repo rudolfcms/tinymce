@@ -7,6 +7,7 @@ cache:
 
 build:
   script:
+  - apk add --update git
   - npm install -g bower
   - bower install --allow-root
   - npm install
