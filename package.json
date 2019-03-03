@@ -13,7 +13,7 @@
     "tinymce-i18n": "*"
   },
   "devDependencies": {
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.4.0",
     "lodash": "^4.17.10",
