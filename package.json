@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "tinymce": "^4.8.1",
-    "tinymce-i18n": "*"
+    "tinymce-i18n": ">=19.4.15"
   },
   "devDependencies": {
     "del": "^3.0.0",
