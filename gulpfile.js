@@ -1,4 +1,3 @@
-var _  = require("lodash");
 var del = require("del");
 var gulp = require("gulp");
 var rename = require("gulp-rename");
