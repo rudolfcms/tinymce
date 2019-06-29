@@ -10,11 +10,11 @@ build:
   - yarn
   - yarn build
   - cd build/
-  - mv langs plugins skins themes hooks.php jquery.tinymce.min.js tinymce.min.js ../
+  - mv langs5 plugins skins themes hooks.php jquery.tinymce.min.js tinymce.min.js ../
   - cd ../
   artifacts:
     paths:
-    - langs
+    - langs5
     - plugins
     - skins
     - themes
