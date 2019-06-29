@@ -2,16 +2,13 @@ image: node:8-alpine
 
 cache:
   paths:
-  - bower_components
   - node_modules
 
 build:
   script:
   - apk add --update git
-  - npm install -g bower
-  - bower install --allow-root
-  - npm install
-  - npm run build
+  - yarn
+  - yarn build
   - cd build/
   - mv langs plugins skins themes hooks.php jquery.tinymce.min.js tinymce.min.js ../
   - cd ../
