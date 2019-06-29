@@ -1,49 +1,49 @@
-var del = require("del");
-var gulp = require("gulp");
-var rename = require("gulp-rename");
-var runSequence = require("run-sequence");
+const { task, src, dest, series, parallel } = require("gulp");
+const rename = require("gulp-rename");
+const del = require("del");
 
-var paths = {
+const paths = {
   npm: "./node_modules/",
   bower: "./bower_components/",
   dest: "./build/"
 };
 
-var npm = {
+const npm = {
   "tinymce": "tinymce/**/*.{min\.js,min\.css,ttf,svg,woff,eot}",
   "tinymce-i18n": "tinymce-i18n/**/*.js"
-}
+};
 
-gulp.task("copy-assets", function () {
-  for (var destinationDir in npm) {
-    gulp.src(paths.npm + npm[destinationDir])
-      .pipe(gulp.dest(paths.dest));
+task("copy-assets", function (done) {
+  for (const destinationDir in npm) {
+    src(paths.npm + npm[destinationDir])
+      .pipe(dest(paths.dest));
   }
+  done();
 });
 
-gulp.task("responsivefilemanager-addon", function () {
-  gulp.src(paths.bower + "ResponsiveFilemanager/resources/assets/js/plugin.js")
-      .pipe(gulp.dest("./build/plugins/filemanager/"));
+task("responsivefilemanager-addon", function (done) {
+  src(paths.npm + "responsive-filemanager/resources/assets/js/plugin.js")
+      .pipe(dest("./build/plugins/filemanager/"));
 
-  gulp.src(paths.bower + "ResponsiveFilemanager/resources/assets/js/plugin_responsivefilemanager_plugin.js")
+  src(paths.npm + "responsive-filemanager/resources/assets/js/plugin_responsivefilemanager_plugin.js")
       .pipe(rename("plugin.min.js"))
-      .pipe(gulp.dest("./build/plugins/responsivefilemanager/"));
+      .pipe(dest("./build/plugins/responsive-filemanager/"));
+  done();
 });
 
-gulp.task("php", function () {
-  gulp.src("./src/**/*.php")
-    .pipe(gulp.dest(paths.dest));
+task("php", function (done) {
+  src("./src/**/*.php")
+    .pipe(dest(paths.dest));
+  done();
 });
 
-gulp.task("clean", function() {
-  return del.sync(paths.dest);
-})
+task("clean", function() {
+  return del([paths.dest]);
+});
 
 // Build Sequences
 // ---------------
 
-gulp.task("default", ["build"]);
+task("build", series("clean", parallel("copy-assets", "php"), "responsivefilemanager-addon"));
 
-gulp.task("build", function() {
-  runSequence("clean", ["copy-assets", "php"], "responsivefilemanager-addon")
-});
+exports.default = series("build");

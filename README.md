@@ -9,7 +9,6 @@
 ## Instalation
 
 ```bash
-$ bower install
 $ npm install
 $ npm run build
 ```

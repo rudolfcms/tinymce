@@ -36,7 +36,7 @@ Filter::add('admin_foot_after', function ($after) {
     $after[] = '<script>
         tinymce.init({
           mode : "specific_textareas",
-          theme: "modern",
+          theme: "silver",
           selector: "textarea.tinymce",
           language_url : "'.PLUGINS.'/tinymce/langs/pl.js",
           language: "pl",
@@ -46,10 +46,10 @@ Filter::add('admin_foot_after', function ($after) {
             "advlist autolink link image lists charmap print preview hr anchor pagebreak",
             "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
             "table contextmenu directionality emoticons paste textcolor filemanager code fullscreen",
-            "responsivefilemanager"
+            "responsive-filemanager"
           ],
           toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
-          toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor | print preview code fullscreen",
+          toolbar2: "| responsive-filemanager | link unlink anchor | image media | forecolor backcolor | print preview code fullscreen",
           image_advtab: true,
 
           external_filemanager_path: "'.PLUGINS.'/responsive-file-manager/filemanager/",
