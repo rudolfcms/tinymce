@@ -14,7 +14,7 @@
     "responsive-filemanager": "trippo/ResponsiveFilemanager#680c444d9bfc1dd3ee9b7f02c12a7876c73c973b"
   },
   "devDependencies": {
-    "del": "^4.1.1",
+    "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-rename": "^1.4.0"
   }
