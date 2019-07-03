@@ -9,7 +9,7 @@
   "author": "Mikołaj Pich <m.pich@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "tinymce": "^5.0.9",
+    "tinymce": "^5.0.10",
     "tinymce-i18n": "*",
     "responsive-filemanager": "trippo/ResponsiveFilemanager#680c444d9bfc1dd3ee9b7f02c12a7876c73c973b"
   },
