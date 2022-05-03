@@ -9,13 +9,13 @@
   "author": "Mikołaj Pich <m.pich@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "tinymce": "^5.0.9",
+    "tinymce": "^6.0.2",
     "tinymce-i18n": "*",
     "responsive-filemanager": "trippo/ResponsiveFilemanager#680c444d9bfc1dd3ee9b7f02c12a7876c73c973b"
   },
   "devDependencies": {
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-rename": "^1.4.0"
+    "gulp-rename": "^2.0.0"
   }
 }
